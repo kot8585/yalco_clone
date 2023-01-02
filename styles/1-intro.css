@@ -1,0 +1,81 @@
+.intro {
+  background-image: url(../images/intro-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.intro__dark{
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.67);
+}
+
+
+@keyframes blink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.intro_type .underscore {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternative;
+}
+
+/* 하단의 빨간 도형들 */
+[class^="intro__tilt"] {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: var(--color-main);
+  clip-path: polygon(100% 90%, 100% 100%, 0 100%, 0 0);
+}
+
+.intro__tilt--flip {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 90%);
+  opacity: 0.5;
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    height: 100vh;
+  }
+
+  .intro_type {
+    margin-top: 40vh;
+    font-size: 2.3em;
+    font-weight: bold;
+    /* padding-right: px; */
+    text-align: center;
+  }
+
+  .intro_type > div:first-child {
+    position: relative;
+   left: -10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .intro {
+    height: 500px;
+  }
+
+  .intro_type {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+
+
+}

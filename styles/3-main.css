@@ -1,0 +1,46 @@
+main {
+  display: grid;
+  background-color: var(--color-light-bg);
+  grid-template-columns: 1fr;
+  text-align:center;
+}
+
+/* 배경 색상 설정 */
+#html {
+  background-color: white;
+}
+
+#css {
+  background-color: white;
+}
+
+#curriculum {
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.section__tag {
+  color: green;
+  font-size: 22px;
+}
+
+.section__title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+@media (min-width: 769px) {
+    main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #about {
+    grid-column: 1 / -1;
+  }
+  #curriculum {
+    grid-column: 1 / -1;
+  }
+  #contact {
+    grid-column: 1 / -1;
+  }
+  
+}

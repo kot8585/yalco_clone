@@ -1,0 +1,73 @@
+/* 헤더 sticky flex bg-color:red */
+.header {
+  position: relative;
+  background-color: var(--color-main);
+  padding: 5px;
+  color: white;
+  height: 40px;
+}
+
+/* 로고 넣기 */
+.header__logo {
+  position: absolute;
+  width: 90px;
+  height: 100%;
+  bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .header__nav {
+    display: none; 
+    position: absolute;
+    z-index: 1;
+    background-color: var(--color-dark);
+    width: 100vw;
+    left: 0;
+    top : 50px;
+    text-align: center;
+  }
+  
+  .header__nav ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: large;
+    border-bottom: 2px solid;
+    border-color: gainsboro;
+  }
+  
+  .header > img {
+    width: 30px;
+    height: 30px;
+    /* margin-top: 10px; */
+    right : 5px;
+    position: absolute;
+  }
+
+}
+
+@media (min-width: 769px) {
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+  .header > img {
+    display: none;
+  }
+
+  .header__nav {
+    /* display:none면 자리는 차지하고 있는건가?? */
+    display: inherit; 
+  
+  }
+
+  .header__nav * {
+    display: inline-block;
+    margin-left: 5px;
+    padding-top: 5px;
+    vertical-align: sub;
+    /* vertical-align: bottom; */
+  }
+}
