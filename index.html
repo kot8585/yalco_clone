@@ -6,29 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>yalco</title>
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-
   <link rel="stylesheet" href="./style.css">
-  
-  <script>
-    window.onload = function () {
-      const $header__nav = document.querySelector(".header__nav");
-      const $header__menu = document.querySelector(".header__menu");
-
-      $header__menu.addEventListener("click", function(e) {
-        console.log("이미지가 클릭되었다!");
-          
-        //이거 true/false로 바꿔야될거같은데.... 
-        //색깔까지 비교해야되서 true false가 나을듯...
-        if($header__nav.style.display === 'none')
-          $header__nav.style.display = 'block';
-        else
-          $header__nav.style.display = 'none';
-      })
-      
-          
-    
-    }
-  </script>
+  <script defer src="./script.js"></script>
 </head>
 <body>
   <section class="intro">
@@ -53,7 +32,7 @@
     </h1>
     <!-- ??? 왜 넣은지 모르겟음.. 아 다음줄로 넘어가게 하려고...? -->
     <!-- <input type="text" class="header__menu-btn"> -->
-    <img src="./images//menu-button.svg" alt="메뉴" class="header__menu">
+    <img src="./images//menu-button.svg" alt="메뉴" class="header__menu"> 
     <nav class="header__nav">
       <ul>
         <li><a href="#about">얄코강좌는</a></li>

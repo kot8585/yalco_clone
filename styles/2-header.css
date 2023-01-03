@@ -1,73 +1,71 @@
-/* 헤더 sticky flex bg-color:red */
 .header {
-  position: relative;
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  justify-content: space-between;
   background-color: var(--color-main);
-  padding: 5px;
+  height: var(--height-toolbar);
+  align-items: center;
+  
   color: white;
-  height: 40px;
 }
 
-/* 로고 넣기 */
+.header__homelink {
+  display: inline-block;
+  height: var(--height-toolbar);
+  line-height: var(--height-toolbar);
+  cursor: pointer;
+  width: 100px;
+  padding: 0 18px;
+}
+
 .header__logo {
-  position: absolute;
-  width: 90px;
-  height: 100%;
-  bottom: 5px;
+  height: 48px;
+  vertical-align: middle;
+  margin-bottom: 6px;
+}
+
+.header__menu {
+  width: 50px;
+  height: var(--height-toolbar);
+  vertical-align: middle;
+  /* margin-bottom: 6px; */
+  cursor: pointer;
+  padding: 0 18px;
 }
 
 @media (max-width: 768px) {
-
-  .header__nav {
-    display: none; 
-    position: absolute;
-    z-index: 1;
+  .header__nav{
+    top: var(--height-toolbar);
+    right: 0;
     background-color: var(--color-dark);
+    display: none;
+    /* display: inherit; */
+    /* static이 아니기만 하면 기준이 되는건가 */
+    position: absolute;    
+  }
+
+  .header__nav li {
     width: 100vw;
-    left: 0;
-    top : 50px;
     text-align: center;
+    padding :15px;
+    border-bottom: 1px solid;
+    border-color: white;
   }
-  
-  .header__nav ul li {
-    display: inline-block;
-    width: 100%;
-    padding: 15px 0px;
-    font-size: large;
-    border-bottom: 2px solid;
-    border-color: gainsboro;
-  }
-  
-  .header > img {
-    width: 30px;
-    height: 30px;
-    /* margin-top: 10px; */
-    right : 5px;
-    position: absolute;
+
+  .header__nav li a {
+    width: 100vw;
   }
 
 }
 
 @media (min-width: 769px) {
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-  .header > img {
+  .header__menu {
     display: none;
   }
 
-  .header__nav {
-    /* display:none면 자리는 차지하고 있는건가?? */
-    display: inherit; 
-  
-  }
-
-  .header__nav * {
+  .header__nav ul li{
     display: inline-block;
-    margin-left: 5px;
-    padding-top: 5px;
-    vertical-align: sub;
-    /* vertical-align: bottom; */
   }
 }
