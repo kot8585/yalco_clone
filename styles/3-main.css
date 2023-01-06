@@ -5,6 +5,10 @@ main {
   text-align:center;
 }
 
+main > * {
+  padding: 20px 0;
+}
+
 /* 배경 색상 설정 */
 #html {
   background-color: white;

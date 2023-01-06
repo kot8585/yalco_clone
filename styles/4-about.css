@@ -1,5 +1,73 @@
+/* about에다가 flex를 줘야할까? flex 안주면 옆으로 안넘어가지 않나? 
+그러면 큰 화면에서만 주면 될듯 */
+
+.about {
+  margin: 0px 260px;
+}
+
+.about__card {
+  border-radius: 15px;
+  background-color: var(--color-dark);
+  margin: 15px 5px;
+  padding: 25px 0px;
+  color: white;
+}
+
+.about__icon {
+  width: 120px;
+  height: 120px;
+  opacity: 0.25;
+}
+
+.about__title {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.about__title._1{
+  color: #FFB974;
+}
+
+.about__title._2{
+  color: #6BB0F3;
+}
+
+.about__title._3{
+  color: #FFBDCE;
+}
+
+.about::-webkit-scrollbar{
+  display: none; 
+}
+
 @media (max-width: 768px) {
 }
 
 @media (min-width: 769px) {
+  .about {
+    white-space: nowrap;
+    overflow: auto;
+    -ms-overflow-style: none;
+  }
+
+  .about__card {
+    display: inline-block;
+    width: 300px;
+    cursor: pointer;
+    
+  }
+
+  .about__card:hover{
+    transform: scale(1.1);
+    z-index: 1;
+    /* 다른애들은 어떻게 약하게 한거지? */
+  }
+
+  .about__card:hover > .about__icon{
+    opacity: 1;
+  }
+
+  .about:hover .about__card:not(:hover){
+    transform: scale(0.9);
+  }
 }
