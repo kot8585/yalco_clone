@@ -1,3 +1,103 @@
+.contact__menu{
+  border-radius: 15px;
+  background-color: white;
+  display: inline-block;
+  height: 70px;
+}
+
+.contact__menu span:first-child {
+  border-radius: 15px 0 0 15px;
+  background-color: var(--color-main);
+  color: white;
+}
+
+.contact__menu span:last-child {
+  border-radius: 0 15px 15px 0;
+}
+
+.contact__menu span {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: var(--font-size-larger);
+}
+
+#channel {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.contact__slide--number {
+  flex-shrink: 0;
+  width: 100vw;
+}
+
+.contact__slide--number > table{
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+tr > td:first-child {
+  border-right: 3px solid var(--color-light-bd);
+  padding: 0 30px;
+}
+
+.contact__slide--message{
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  
+}
+
+.contact__slide--message * {
+  font-size: var(--font-size-text);
+  margin-bottom: 3px;
+}
+
+#message {
+  padding: 7px;
+  resize: none;
+  border: 3px solid var(--color-light-bd);
+  outline: none;
+}
+
+#email {
+  padding: 7px;
+  outline: none;
+  border: 3px solid var(--color-light-bd);
+}
+
+#message:focus, #email:focus {
+  /* resize: none; */
+  border: 3px solid var(--color-sub);
+}
+
+.contact__slide--message button {
+  border: none;
+  padding: 15px;
+  background-color: var(--color-sub);
+  color: white;
+}
+
+/* 보여줄 크기 설정  */
+.contact__slide-show {
+  display: flex;
+  /* overflow: hidden; */
+  position: relative;
+  left: 0;
+}
+
+.contact__slide--form {
+  width: 100vw;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+
 @media (max-width: 768px) {
 }
 
